@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Management</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header{
+            background-color: gray;
+            margin-top: 0%;
+            padding: 10px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: paleturquoise;
+        }
+        .main{
+            margin: 15px;
+        }
+        .main-left{
+            width: 45%;
+            height: 450px;
+            margin: 10px;
+            padding:5px;
+            background-color: beige;
+            float: left;
+            border-radius: 10px;
+        }
+        .main-left p{
+            margin-top: 20px;
+            padding: 10px;
+            text-align: justify;
+            font-size: 20px;
+        }
+        .main-right{
+            width: 45%;
+            height: 450px;
+            margin: 10px;
+            padding:5px;
+            text-align: center;
+            justify-content: center;
+            background-color: aquamarine;
+            float: left;
+            border-radius: 10px;
+        }
+        .main-right ul,li{
+            margin: 20px;
+            padding: 10px;
+            text-align:justify;
+            justify-content:baseline;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 10px auto;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+        }
+        .add{
+            background-color: green;
+        }
+        .get{
+            background-color: #0056b3;
+        }
+        .delete{
+            background-color: red;
+        }
+        .btn:hover {
+            background-color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>App Management System</h1>
+    </header>
+    <div class="main">
+        <div class="main-left">
+            <p>
+                The App Management System is a simple yet powerful web application that allows users to add,
+                retrieve, and delete applications from a database using a user-friendly interface. 
+                This system is built using Django with an SQLite database to store app details, 
+                including the app name, version, and description.
+            </p>
+            <p>
+                This API-based system ensures seamless app management and can be easily expanded for
+                more functionalities, such as updating app details or integrating authentication. 
+                With a clean and intuitive interface, this tool is useful for developers and 
+                administrators who need a lightweight application management solution.
+            </p>
+            <a href="/admin/" class="btn add">Admin Pannel</a>
+        </div>
+        <div class="main-right">
+            <ul>
+                <li>
+                    Add button for add app data to the database
+                </li>
+                <li>
+                    Get button for retrieve app details by ID
+                </li>
+                <li>
+                    Delete button for delete an app from the database
+                </li>
+            </ul>
+            <a href="/api/AppDetails" class="btn add">Add App</a>
+            <a href="/api/AppDetails/1" class="btn get ">Get App</a>
+            <a href="/api/AppDetails/1" class="btn delete">Delete App</a>
+        </div>
+    </div>
+    
+
+</body>
+</html>
